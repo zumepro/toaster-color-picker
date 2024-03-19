@@ -1,1 +1,4 @@
-console.log("Hello, world!");
+/// <reference lib="dom" />
+
+
+document.getElementById("gradient")!.style.backgroundColor = "#ff0000";

@@ -1,0 +1,63 @@
+$color-picker-width: 50vw;
+$hue-picker-height: 50px;
+
+
+body {
+    font-family: Arial;
+}
+
+
+.gradient-wrapper {
+    position: relative;
+    width: $color-picker-width;
+    height: 50vh;
+    //overflow: hidden;
+    margin: 1rem;
+    border: 5px solid white;
+}
+
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #000 100%),linear-gradient(to right, #fff 0, rgba(255, 255, 255, 0) 100%);
+}
+
+.gradient-circle {
+    position: absolute;
+    border: 5px solid white;
+    height: calc($hue-picker-height - 10px);
+    width: calc($hue-picker-height - 10px);
+    transform: translate(-50%, -50%);
+    border-radius: $hue-picker-height;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.huepicker-wrapper {
+    position: relative;
+    width: $color-picker-width;
+    height: $hue-picker-height;
+    margin: 1rem;
+    overflow: hidden;
+    border-radius: 50vw;
+    border: 5px solid white;
+}
+
+.huepicker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #f00 0, #ff0 16%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 84%, #ff0004 100%);
+    z-index: -1;
+}
+
+.huepicker-circle {
+    position: absolute;
+    border: 5px solid white;
+    height: calc($hue-picker-height - 10px);
+    width: calc($hue-picker-height - 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: $hue-picker-height;
+}
